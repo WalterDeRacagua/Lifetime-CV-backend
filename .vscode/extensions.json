@@ -1,0 +1,47 @@
+{
+  "recommendations": [
+    // Esenciales
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+    "johnpapa.vscode-peacock",
+
+    // TypeScript
+    "ms-vscode.vscode-typescript-next",
+
+    // Git
+    "eamodio.gitlens",
+    "felipecaputo.git-project-manager",
+    "arturock.gitstash",
+
+    // Calidad de código
+    "wix.vscode-import-cost",
+    "usernamehw.errorlens",
+    "streetsidesoftware.code-spell-checker",
+
+    // Testing
+    "firsttris.vscode-jest-runner",
+
+    // Base de datos
+    "mtxr.sqltools",
+    "mtxr.sqltools-driver-pg",
+
+    // APIs
+    "humao.rest-client",
+
+    // Docker
+    "ms-azuretools.vscode-docker",
+
+    // Utilidades
+    "oderwat.indent-rainbow",
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "wayou.vscode-todo-highlight",
+
+    // UI
+    "vscode-icons-team.vscode-icons",
+
+    // Markdown
+    "yzhang.markdown-all-in-one"
+  ]
+}
