@@ -15,7 +15,7 @@
     "migration:show": "npm run typeorm -- migration:show -d src/config/data-source.ts",
     "schema:sync": "npm run typeorm -- schema:sync -d src/config/data-source.ts",
     "schema:drop": "npm run typeorm -- schema:drop -d src/config/data-source.ts",
-    "seed": "ts-node src/seeds/index.ts",
+    "seed": "ts-node src/seeds/create-admin-user.seed.ts",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",

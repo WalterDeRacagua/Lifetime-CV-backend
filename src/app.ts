@@ -4,6 +4,12 @@ import dotenv from 'dotenv';
 import express, { Application, Request, Response, NextFunction } from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
+import authRoutes from './routes/auth.routes';
+import contactMessageRoutes from './routes/contact-message.routes';
+import experienceRoutes from './routes/experience.routes';
+import projectRoutes from './routes/project.routes';
+import skillRoutes from './routes/skill.routes';
+
 dotenv.config();
 
 const app: Application = express();
@@ -48,10 +54,13 @@ app.get('/', (_request: Request, response: Response) => {
 });
 
 // API Routes - Aquí irán todas las rutas de la API
-// TODO: Añadir rutas cuando las creemos
-// app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1/experiences', experienceRoutes);
+app.use('/api/v1/projects', projectRoutes);
+app.use('/api/v1/skills', skillRoutes);
+app.use('/api/v1/contact', contactMessageRoutes);
+
 // app.use('/api/v1/users', userRoutes);
-// app.use('/api/v1/experiences', experienceRoutes);
 
 app.use((request: Request, response: Response) => {
   response.status(404).json({
