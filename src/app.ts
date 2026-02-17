@@ -7,6 +7,7 @@ import morgan from 'morgan';
 import authRoutes from './routes/auth.routes';
 import experienceRoutes from './routes/experience.routes';
 import projectRoutes from './routes/project.routes';
+import skillRoutes from './routes/skill.routes';
 
 dotenv.config();
 
@@ -55,6 +56,7 @@ app.get('/', (_request: Request, response: Response) => {
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/experiences', experienceRoutes);
 app.use('/api/v1/projects', projectRoutes);
+app.use('/api/v1/skills', skillRoutes);
 
 // app.use('/api/v1/users', userRoutes);
 
