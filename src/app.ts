@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import express, { Application, Request, Response, NextFunction } from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
+import authRoutes from './routes/auth.routes';
 dotenv.config();
 
 const app: Application = express();
@@ -48,8 +49,7 @@ app.get('/', (_request: Request, response: Response) => {
 });
 
 // API Routes - Aquí irán todas las rutas de la API
-// TODO: Añadir rutas cuando las creemos
-// app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1/auth', authRoutes);
 // app.use('/api/v1/users', userRoutes);
 // app.use('/api/v1/experiences', experienceRoutes);
 
