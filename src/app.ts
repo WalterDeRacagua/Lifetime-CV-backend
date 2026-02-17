@@ -6,6 +6,8 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import authRoutes from './routes/auth.routes';
 import experienceRoutes from './routes/experience.routes';
+import projectRoutes from './routes/project.routes';
+
 dotenv.config();
 
 const app: Application = express();
@@ -52,6 +54,8 @@ app.get('/', (_request: Request, response: Response) => {
 // API Routes - Aquí irán todas las rutas de la API
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/experiences', experienceRoutes);
+app.use('/api/v1/projects', projectRoutes);
+
 // app.use('/api/v1/users', userRoutes);
 
 app.use((request: Request, response: Response) => {

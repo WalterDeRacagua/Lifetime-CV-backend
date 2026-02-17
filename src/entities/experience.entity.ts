@@ -5,7 +5,7 @@ export class Experience {
   @PrimaryGeneratedColumn()
   id!: number;
 
-  @Column({ unique: true })
+  @Column({ unique: false })
   company!: string;
 
   @Column()
